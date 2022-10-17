@@ -14,7 +14,7 @@ async function fetchPokemons() {
     const olista$$ = document.querySelector('#pokedex');
     const li$$ = document.createElement('li');
     const img$$ = document.createElement('img');
-    const ptitle$$ = document.createElement('p');
+    const ptitle$$ = document.createElement('span');
     const abilities$$ = document.createElement('p');
     const height$$ = document.createElement('p');
     const hp$$ = document.createElement('p');
@@ -36,7 +36,6 @@ async function fetchPokemons() {
     for (const tipos of pokemon.types) {
         types.push(tipos.type.name)
     }
-console.log(types[0]);
 
     
     img$$.src = pokemon.sprites['front_default'];
@@ -116,21 +115,7 @@ console.log(types[0]);
     li$$.appendChild(specialDefense$$);
     li$$.appendChild(types$$);
     olista$$.appendChild(li$$);
-
-
-
   }
-  
-
-
-
-
-
-
-
-
-
-
 }
 
 fetchPokemons();
