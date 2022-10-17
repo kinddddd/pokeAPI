@@ -18,13 +18,14 @@ body {
     padding: 40px;
     background-color: #f4f4f4;
     color: #222;
-    text-align: center;
+
   }
   .card-title {
     text-transform: uppercase;
     font-size: 32px;
     font-weight: normal;
     margin-bottom: 0;
+    text-align: center;
   }
   .card-subtitle {
     font-weight: lighter;
