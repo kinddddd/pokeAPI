@@ -8,10 +8,62 @@ body {
     padding: 40px;
     margin: 0 auto;
   }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  
   h1 {
     text-transform: uppercase;
     text-align: center;
     font-size: 54px;
+  }
+
+.buscador {
+  width: 300px;
+
+}
+
+
+  .card-grass {
+    list-style: none;
+    padding: 40px;
+    background-color: #317B52;
+    color: #222;
+    text-align: center;
+  }
+
+  .card-fire {
+    list-style: none;
+    padding: 40px;
+    background-color: #FC8F40;
+    color: #222;
+    text-align: center;
+  }
+  .card-water {
+    list-style: none;
+    padding: 40px;
+    background-color: #5587CA;
+    color: #222;
+    text-align: center;
+  }
+  .card-bug {
+    list-style: none;
+    padding: 40px;
+    background-color: #9FD16A;
+    color: #222;
+    text-align: center;
+  }
+  .card-poison {
+    list-style: none;
+    padding: 40px;
+    background-color: #8A6EB5;
+    color: #222;
+    text-align: center;
   }
   .card {
     list-style: none;
@@ -20,6 +72,78 @@ body {
     color: #222;
     text-align: center;
   }
+  .card-electric {
+    list-style: none;
+    padding: 40px;
+    background-color: #F6D942;
+    color: #222;
+    text-align: center;
+  }
+  .card-ground {
+    list-style: none;
+    padding: 40px;
+    background-color: #785516;
+    color: #222;
+    text-align: center;
+  }
+  .card-fairy {
+    list-style: none;
+    padding: 40px;
+    background-color: #FFC5B4;
+    color: #222;
+    text-align: center;
+  }
+  .card-fighting {
+    list-style: none;
+    padding: 40px;
+    background-color: #E6BD9C;
+    color: #222;
+    text-align: center;
+  }
+  .card-psychic {
+    list-style: none;
+    padding: 40px;
+    background-color: #DAC30C;
+    color: #222;
+    text-align: center;
+  }
+  .card-rock {
+    list-style: none;
+    padding: 40px;
+    background-color: #6F685A;
+    color: #222;
+    text-align: center;
+  }
+  .card-steel {
+    list-style: none;
+    padding: 40px;
+    background-color: #8BB4A4;
+    color: #222;
+    text-align: center;
+  }
+  .card-ghost {
+    list-style: none;
+    padding: 40px;
+    background-color: #835A6A;
+    color: #222;
+    text-align: center;
+  }
+  .card-dragon {
+    list-style: none;
+    padding: 40px;
+    background-color: #5D6E9C;
+    color: #222;
+    text-align: center;
+  }
+  .card-ice {
+    list-style: none;
+    padding: 40px;
+    background-color: #6AACF6;
+    color: #222;
+    text-align: center;
+  }
+
+
   .card-title {
     text-transform: uppercase;
     font-size: 32px;
@@ -29,7 +153,6 @@ body {
   }
   .card-subtitle {
     font-weight: lighter;
-    color: #666;
     margin-top: 5px;
   }
   .card-image {

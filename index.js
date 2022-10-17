@@ -4,7 +4,6 @@ const POKEDEX = [];
 
 async function fetchPokemons() {
   const pokemonsToFetch = [...new Array(150)].map((el, index) => index + 1);
-  console.log(pokemonsToFetch);
   for(const index of pokemonsToFetch) {
     const response = await fetch(baseUrl + index);
     const result = await response.json();
@@ -37,7 +36,7 @@ async function fetchPokemons() {
     for (const tipos of pokemon.types) {
         types.push(tipos.type.name)
     }
-
+console.log(types[0]);
 
     
     img$$.src = pokemon.sprites['front_default'];
@@ -66,6 +65,41 @@ async function fetchPokemons() {
     specialDefense$$.classList.add('card-subtitle');
     speed$$.classList.add('card-subtitle');
     types$$.classList.add('card-subtitle');
+
+
+    if (types[0] === 'grass') {
+        li$$.className = 'card-grass';
+    } else if (types[0] === 'fire') {
+        li$$.className = 'card-fire';
+    } else if (types[0] === 'water') {
+        li$$.className = 'card-water';
+    } else if (types[0] === 'bug') {
+        li$$.className = 'card-bug';
+    } else if (types[0] === 'poison') {
+        li$$.className = 'card-poison';
+    } else if (types[0] === 'normal') {
+        li$$.className = 'card';
+    } else if (types[0] === 'electric') {
+        li$$.className = 'card-electric';
+    } else if (types[0] === 'ground') {
+        li$$.className = 'card-ground';
+    } else if (types[0] === 'fairy') {
+        li$$.className = 'card-fairy';
+    } else if (types[0] === 'fighting') {
+        li$$.className = 'card-fighting';
+    } else if (types[0] === 'psychic') {
+        li$$.className = 'card-psychic';
+    } else if (types[0] === 'rock') {
+        li$$.className = 'card-rock';
+    } else if (types[0] === 'steel') {
+        li$$.className = 'card-steel';
+    } else if (types[0] === 'ghost') {
+        li$$.className = 'card-ghost';
+    } else if (types[0] === 'dragon') {
+        li$$.className = 'card-dragon';
+    } else if (types[0] === 'ice') {
+        li$$.className = 'card-ice';
+    }
 
 
    
