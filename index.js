@@ -18,7 +18,12 @@ async function fetchPokemons() {
     const ptitle$$ = document.createElement('p');
     const abilities$$ = document.createElement('p');
     const height$$ = document.createElement('p');
-    const stats$$ = document.createElement('p');
+    const hp$$ = document.createElement('p');
+    const attack$$ = document.createElement('p');
+    const defense$$ = document.createElement('p');
+    const specialAttack$$ = document.createElement('p');
+    const specialDefense$$ = document.createElement('p');
+    const speed$$ = document.createElement('p');
     const types$$ = document.createElement('p');
 
 
@@ -28,6 +33,10 @@ async function fetchPokemons() {
         abilities.push(habilidades.ability.name);
     }
 
+    const types = [];
+    for (const tipos of pokemon.types) {
+        types.push(tipos.type.name)
+    }
 
 
     
@@ -35,15 +44,27 @@ async function fetchPokemons() {
     ptitle$$.textContent = pokemon.name;
     abilities$$.textContent = 'Abilities: ' + abilities.join(' | ');
     height$$.textContent = 'Height: ' + pokemon.height;
-    stats$$.textContent = 'Stats: ' + 
-    
+    hp$$.textContent = 'HP: ' + pokemon.stats[0]['base_stat'];
+    attack$$.textContent = 'Attack: ' + pokemon.stats[1]['base_stat'];
+    defense$$.textContent = 'Defense: ' + pokemon.stats[2]['base_stat'];
+    specialAttack$$.textContent = 'Special attack: ' + pokemon.stats[3]['base_stat'];
+    specialDefense$$.textContent = 'Special defense: ' + pokemon.stats[4]['base_stat'];
+    types$$.textContent = 'Type: ' + types.join(' | ');
+
+
+
 
     li$$.classList.add('card');
     img$$.classList.add('card-image')
     ptitle$$.classList.add('card-title');
     abilities$$.classList.add('card-subtitle');
     height$$.classList.add('card-subtitle');
-    stats$$.classList.add('card-subtitle');
+    hp$$.classList.add('card-subtitle');
+    attack$$.classList.add('card-subtitle');
+    defense$$.classList.add('card-subtitle');
+    specialAttack$$.classList.add('card-subtitle');
+    specialDefense$$.classList.add('card-subtitle');
+    speed$$.classList.add('card-subtitle');
     types$$.classList.add('card-subtitle');
 
 
@@ -51,9 +72,14 @@ async function fetchPokemons() {
 
     li$$.appendChild(img$$);
     li$$.appendChild(ptitle$$);
-    li$$.appendChild(abilities$$);
     li$$.appendChild(height$$);
-    li$$.appendChild(stats$$);
+    li$$.appendChild(hp$$);
+    li$$.appendChild(speed$$);
+    li$$.appendChild(abilities$$);
+    li$$.appendChild(attack$$);
+    li$$.appendChild(defense$$);
+    li$$.appendChild(specialAttack$$);
+    li$$.appendChild(specialDefense$$);
     li$$.appendChild(types$$);
     olista$$.appendChild(li$$);
 
