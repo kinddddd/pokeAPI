@@ -25,6 +25,9 @@ body {
 
 .buscador {
   width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 10px;
 
 }
 
@@ -33,7 +36,11 @@ p {
   border-radius: 5px;
 }
 
-
+  li {
+    width: 250px;
+    border-radius: 10px;
+    margin: 40px;
+  }
   .card-grass {
     list-style: none;
     padding: 40px;
@@ -160,16 +167,32 @@ p {
     font-weight: lighter;
     margin-top: 5px;
   }
+
+
+
+
   .card-image {
     height: 180px;
     text-align: center;
   }
-  #pokedex {
+  /* #pokedex {
     padding-inline-start: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
-  }
+  } */
+
+#pokedex {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+
   .card:hover {
     animation: bounce 0.5s linear;
   }
