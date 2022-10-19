@@ -135,7 +135,7 @@ function allPokemon() {
  function onePokemon() {
     olista$$.innerHTML = '';
     for (const pokemon of POKEDEX) {
-        if(input$$.value == pokemon.name || input$$.value == pokemon.types[0].type.name) {
+        if(input$$.value.toLowerCase() == pokemon.name || input$$.value == pokemon.types[0].type.name) {
             const li$$ = document.createElement('li');
             const img$$ = document.createElement('img');
             const ptitle$$ = document.createElement('span');
