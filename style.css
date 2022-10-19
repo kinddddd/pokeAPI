@@ -1,5 +1,7 @@
 body {
-    background-color: orangered;
+    background-image: url('./icons/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     margin: 0;
     font-family: rubik;
     color: white;
@@ -16,12 +18,14 @@ body {
     align-items: center;
   }
 
-
-  h1 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 54px;
+  .pokedex_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
   }
+
 
 .buscador {
   width: 300px;
@@ -34,17 +38,46 @@ body {
 p {
   background-color: rgba(255, 255, 255, 0.781);
   border-radius: 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
 }
 
-  li {
+  #pokedex > * {
     width: 250px;
     border-radius: 10px;
     margin: 40px;
+    -webkit-box-shadow: 0px 13px 10px 7px rgba(0,0,0,0.49);
+    -moz-box-shadow: 0px 13px 10px 7px rgba(0,0,0,0.49);
+    box-shadow: 0px 13px 10px 7px rgba(0,0,0,0.49);
   }
+
+  .icons_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .icons {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+  }
+
+  .icons > * {
+    width: 3%;
+    padding: 10px;
+  }
+
+
   .card-grass {
     list-style: none;
     padding: 40px;
-    background-color: #317B52;
+    background-color: #38BF4B;
     color: #222;
     text-align: center;
   }
@@ -52,105 +85,105 @@ p {
   .card-fire {
     list-style: none;
     padding: 40px;
-    background-color: #FC8F40;
+    background-color: #FF4500;
     color: #222;
     text-align: center;
   }
   .card-water {
     list-style: none;
     padding: 40px;
-    background-color: #5587CA;
+    background-color: #3393DD;
     color: #222;
     text-align: center;
   }
   .card-bug {
     list-style: none;
     padding: 40px;
-    background-color: #9FD16A;
+    background-color: #83C300;
     color: #222;
     text-align: center;
   }
   .card-poison {
     list-style: none;
     padding: 40px;
-    background-color: #8A6EB5;
+    background-color: #B567CE;
     color: #222;
     text-align: center;
   }
   .card {
     list-style: none;
     padding: 40px;
-    background-color: #f4f4f4;
+    background-color: #919AA2;
     color: #222;
     text-align: center;
   }
   .card-electric {
     list-style: none;
     padding: 40px;
-    background-color: #F6D942;
+    background-color: #FBD100;
     color: #222;
     text-align: center;
   }
   .card-ground {
     list-style: none;
     padding: 40px;
-    background-color: #785516;
+    background-color: #E87236;
     color: #222;
     text-align: center;
   }
   .card-fairy {
     list-style: none;
     padding: 40px;
-    background-color: #FFC5B4;
+    background-color: #FB89EB;
     color: #222;
     text-align: center;
   }
   .card-fighting {
     list-style: none;
     padding: 40px;
-    background-color: #E6BD9C;
+    background-color: #E12C6A;
     color: #222;
     text-align: center;
   }
   .card-psychic {
     list-style: none;
     padding: 40px;
-    background-color: #DAC30C;
+    background-color: #FF6676;
     color: #222;
     text-align: center;
   }
   .card-rock {
     list-style: none;
     padding: 40px;
-    background-color: #6F685A;
+    background-color: #C9B787;
     color: #222;
     text-align: center;
   }
   .card-steel {
     list-style: none;
     padding: 40px;
-    background-color: #8BB4A4;
+    background-color: #5A8FA3;
     color: #222;
     text-align: center;
   }
   .card-ghost {
     list-style: none;
     padding: 40px;
-    background-color: #835A6A;
+    background-color: #4B6AB3;
     color: #222;
     text-align: center;
   }
   .card-dragon {
     list-style: none;
     padding: 40px;
-    background-color: #5D6E9C;
+    background-color: #0070CA;
     color: #222;
     text-align: center;
   }
   .card-ice {
     list-style: none;
     padding: 40px;
-    background-color: #6AACF6;
+    background-color: #4BD2C1;
     color: #222;
     text-align: center;
   }
@@ -174,13 +207,14 @@ p {
   .card-image {
     height: 180px;
     text-align: center;
+    background-color: white;
+    border-radius: 50%;
+    border-style:solid;
+    border-color: black;
+    border-width: 1px;
   }
-  /* #pokedex {
-    padding-inline-start: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 20px;
-  } */
+  
+
 
 #pokedex {
   display: flex;
@@ -193,7 +227,7 @@ p {
 
 
 
-  .card:hover {
+  #pokedex > *:hover {
     animation: bounce 0.5s linear;
   }
   @keyframes bounce {
