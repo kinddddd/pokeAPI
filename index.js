@@ -13,7 +13,6 @@ async function fetchPokemons() {
   const button$$ = document.querySelector('button');
   const input$$ = document.querySelector('input');
   const olista$$ = document.querySelector('#pokedex');
-  const div$$ = document.querySelector('.nav')
 
 
 function allPokemon() {
@@ -257,9 +256,8 @@ const search = (event) => {
     }
 }
 
+
 button$$.addEventListener('click', search);
-
-
 
 const icons$$ = document.querySelector('.icons');
 
@@ -267,6 +265,8 @@ const back$$ = document.createElement('img');
 back$$.src = './icons/back.png';
 back$$.addEventListener('click', allPokemon);
 icons$$.appendChild(back$$);
+
+
 
 
 const bug$$ = document.createElement('img');
