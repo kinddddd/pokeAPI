@@ -262,7 +262,7 @@ button$$.addEventListener('click', search);
 const icons$$ = document.querySelector('.icons');
 
 const back$$ = document.createElement('img');
-back$$.src = './icons/back.png';
+back$$.src = './icons/pokeball.png';
 back$$.addEventListener('click', allPokemon);
 icons$$.appendChild(back$$);
 
